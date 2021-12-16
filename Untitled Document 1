@@ -1,0 +1,859 @@
+-info-request-for-pdu-session=%7B%22sNssai%22%3A%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D%2C%22roamingIndication%22%3A%22NON_ROAMING%22%7D |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?dnn=PEGAPN-LD3&preferred-locality=area1&requester-nf-type=AMF&service-names=nsmf-pdusession&snssais=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D&target-nf-type=SMF&target-plmn-list=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][PduSess] Recieve Create SM Context Request
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][PduSess] In HandlePDUSessionSMContextCreate
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][PduSess] Send NF Discovery Serving UDM Successfully
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][CTX] Allocated UE IP address: 172.29.29.59
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][CTX] Selected UPF: UPF
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][PduSess] UE[imsi-001020000000004] PDUSessionID[1] IP[172.29.29.59]
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][UDM][SDM] Handle GetSmData
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][UDM][SDM] getSmDataProcedure: SUPI[imsi-001020000000004] PLMNID[00102] DNN[PEGAPN-LD3] SNssai[{"sst":1,"sd":"030609"}]
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][UDR][DRepo] Handle QuerySmData
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/sm-data?single-nssai=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/sm-data?dnn=PEGAPN-LD3&plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D&single-nssai=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] In HandlePDUSessionEstablishmentRequest
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NAS][Convert] ProtocolOrContainerList:  [0xc0004437a0 0xc0004437e0 0xc000443800 0xc000443860 0xc000443880 0xc0004438a0 0xc0004438c0 0xc000443960]
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] Protocol Configuration Options
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] &{[0xc0004437a0 0xc0004437e0 0xc000443800 0xc000443860 0xc000443880 0xc0004438a0 0xc0004438c0 0xc000443960]}
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] Didn't Implement container type InternetProtocolControlProtocolUL
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] Didn't Implement container type IPAddressAllocationViaNASSignallingUL
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] Didn't Implement container type MSSupportOfNetworkRequestedBearerControlIndicatorUL
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] Didn't Implement container type MSSupportOfLocalAddressInTFTIndicatorUL
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] Didn't Implement container type QoSRulesWithTheLengthOfTwoOctetsSupportIndicatorUL
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GSM] Didn't Implement container type QoSFlowDescriptionsWithTheLengthOfTwoOctetsSupportIndicatorUL
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][PduSess] PCF Selection for SMContext SUPI[imsi-001020000000004] PDUSessionID[1]
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][PCF][SMpolicy] Handle CreateSmPolicy
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-smpolicycontrol/v1/sm-policies |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][PduSess] SUPI[imsi-001020000000004] has no pre-config route
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-instance-id=a1c56a4b-5c47-47fa-8d4c-19854b77e3d1&target-nf-type=AMF |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][Consumer] SendNFDiscoveryServingAMF ok
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][GIN] | 201 |       127.0.0.1 | POST    | /nsmf-pdusession/v1/sm-contexts |
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:97][SUPI:imsi-001020000000004] create smContext[pduSessionID: 1] Success
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][SMF][PFCP] In HandlePfcpSessionEstablishmentResponse
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][LIB][PFCP] Remove Request Transaction [135]
+free5gc-main       | &{2000 Mbps 2000 Mbps}
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][AMF][Producer] Handle N1N2 Message Transfer Request
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:97] Send PDU Session Resource Setup Request
+free5gc-main       | 2021-12-16T02:57:13Z [INFO][AMF][GIN] | 200 |       127.0.0.1 | POST    | /namf-comm/v1/ue-contexts/imsi-001020000000004/n1-n2-messages |
+free5gc-main       | 2021-12-16T02:57:14Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T02:57:14Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:57:14Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:98] NAS MAC verification failed(received: 0xcd211610, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:57:14Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:98] Handle Registration Request
+free5gc-main       | 2021-12-16T02:57:14Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:98] Send Registration Reject
+free5gc-main       | 2021-12-16T02:57:14Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:98] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:57:14Z [ERRO][AMF][GMM] Mobility Registration Updating was sent when the UE state was Deregistered
+free5gc-main       | 2021-12-16T02:57:17Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle PDU Session Resource Setup Response
+free5gc-main       | 2021-12-16T02:57:17Z [INFO][SMF][PduSess] Recieve Update SM Context Request
+free5gc-main       | 2021-12-16T02:57:17Z [INFO][SMF][PduSess] In HandlePDUSessionSMContextUpdate
+free5gc-main       | 2021-12-16T02:57:17Z [ERRO][SMF][PduSess] Handle PDUSessionResourceSetupResponseTransfer failed: Align Bit is not zero
+free5gc-main       | 2021-12-16T02:57:17Z [WARN][SMF][PduSess] SM Context State [Active] shouldn't be here
+free5gc-main       | 2021-12-16T02:57:17Z [INFO][SMF][GIN] | 200 |       127.0.0.1 | POST    | /nsmf-pdusession/v1/sm-contexts/urn:uuid:c0e14b1a-6f75-46d4-9700-8e33a0ab83bb/modify |
+free5gc-main       | 2021-12-16T02:57:21Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:57:21Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:97] Rel Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T02:57:21Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[imsi-001020000000004] Context : N2 Connection Release
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][NGAP][192.168.120.72:38412] UE Context Release Request
+free5gc-main       | 2021-12-16T02:57:24Z [WARN][AMF][NGAP][192.168.120.72:38412] Cause RadioNetwork[3]
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:98] Ue Context in Non GMM-Registered
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:98] Send UE Context Release Command
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T02:57:24Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:57:24Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:99] NAS MAC verification failed(received: 0xeb311586, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99] Handle Registration Request
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99] Authentication procedure
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99] Send Identity Request
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Uplink NAS Transport (RAN UE NGAP ID: 11)
+free5gc-main       | 2021-12-16T02:57:24Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:57:24Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:99] NAS MAC verification failed(received: 0x132ccd4c, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99] Handle Identity Response
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99] Authentication procedure
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=AUSF |
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AUSF][UeAuthPost] HandleUeAuthPostRequest
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][AUSF][UeAuthPost] Serving network authorized
+free5gc-main       | 2021-12-16T02:57:24Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AUSF&service-names=nudm-ueau&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDM][UEAU] Handle GenerateAuthDataRequest
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][LIB][3GPP] suciPart: [suci 0 001 02 0 0 0 0000000004]
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][LIB][3GPP] scheme 0
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][LIB][3GPP] SUPI type is IMSI
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDR][DRepo] Handle QueryAuthSubsData
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | 2021-12-16T02:57:25Z [ERRO][UDM][UEAU] opStr length is  0
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDR][DRepo] Handle ModifyAuthentication
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PATCH   | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | AUTN = fb575770bfb88000adc94bc8066d6f5a
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | POST    | /nudm-ueau/v1/suci-0-001-02-0-0-0-0000000004/security-information/generate-auth-data |
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AUSF][UeAuthPost] Add SuciSupiPair (suci-0-001-02-0-0-0-0000000004, imsi-001020000000004) to map.
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AUSF][UeAuthPost] Use 5G AKA auth method
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AUSF][5gAkaAuth] XresStar = 3830616530643430373532313330656661663739323965356536633131336237
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AUSF][GIN] | 201 |       127.0.0.1 | POST    | /nausf-auth/v1/ue-authentications |
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99] Send Authentication Request
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[] Context : Release Ue Context
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Uplink NAS Transport (RAN UE NGAP ID: 11)
+free5gc-main       | 2021-12-16T02:57:25Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:57:25Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:99] NAS MAC verification failed(received: 0xd490886a, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99] Handle Authentication Response
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AUSF][5gAkaAuth] Auth5gAkaComfirmRequest
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AUSF][5gAkaAuth] res*: 3830616530643430373532313330656661663739323965356536633131336237
+free5gc-main       | Xres*: 3830616530643430373532313330656661663739323965356536633131336237
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AUSF][5gAkaAuth] 5G AKA confirmation succeeded
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDM][UEAU] Handle ConfirmAuthDataRequest
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDR][DRepo] Handle CreateAuthenticationStatus
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-status |
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-ueau/v1/imsi-001020000000004/auth-events |
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AUSF][GIN] | 200 |       127.0.0.1 | PUT     | /nausf-auth/v1/ue-authentications/suci-0-001-02-0-0-0-0000000004/5g-aka-confirmation |
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] Send Security Mode Command
+free5gc-main       | 2021-12-16T02:57:25Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Uplink NAS Transport (RAN UE NGAP ID: 11)
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] Handle Security Mode Complete
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] Handle InitialRegistration
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][SDM] Handle GetNssai
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features= |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/nssai?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] RequestedNssai - ServingSnssai: &{Sst:1 Sd:030609}, HomeSnssai: <nil>
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][UECM] Handle RegistrationAmf3gppAccess
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][UECM] UEID: imsi-001020000000004
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][DRepo] Handle CreateAmfContext3gpp
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/amf-3gpp-access |
+free5gc-main       | 2021-12-16T02:57:26Z [ERRO][UDM][HTTP] unsupported scheme[]
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][GIN] | 204 |       127.0.0.1 | PUT     | /nudm-uecm/v1/imsi-001020000000004/registrations/amf-3gpp-access |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][SDM] Handle GetAmData
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/am-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][SDM] Handle GetSmfSelectData
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][DRepo] Handle QuerySmfSelectData
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/smf-selection-subscription-data?supported-features= |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/smf-select-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][SDM] Handle GetUeContextInSmfData
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][DRepo] Handle QuerySmfRegList
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/smf-registrations?supported-features= |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/ue-context-in-smf-data |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][SDM] Handle Subscribe
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][DRepo] Handle CreateSdmSubscriptions
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDR][GIN] | 201 |       127.0.0.1 | POST    | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/sdm-subscriptions |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-sdm/v1/imsi-001020000000004/sdm-subscriptions |
+free5gc-main       | 2021-12-16T02:57:26Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][PCF][Ampolicy] Handle AM Policy Create Request
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][UDR][DRepo] Handle PolicyDataUesUeIdAmDataGet
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/policy-data/ues/imsi-001020000000004/am-data |
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-am-policy-control/v1/policies |
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] Send Registration Accept
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Send Initial Context Setup Request
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Radio Capability Info Indication
+free5gc-main       | 2021-12-16T02:57:27Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial Context Setup Response
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Uplink NAS Transport (RAN UE NGAP ID: 11)
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] Handle Registration Complete
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Uplink NAS Transport (RAN UE NGAP ID: 11)
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] Handle UL NAS Transport
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] Transport 5GSM Message to SMF
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] Select SMF [snssai: {Sst:1 Sd:030609}, dnn: PEGAPN-LD3]
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=NSSF |
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][NSSF][NsSelect] Handle NSSelectionGet
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][NSSF][GIN] | 200 |       127.0.0.1 | GET     | /nnssf-nsselection/v1/network-slice-information?nf-id=a1c56a4b-5c47-47fa-8d4c-19854b77e3d1&nf-type=AMF&slice-info-request-for-pdu-session=%7B%22sNssai%22%3A%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D%2C%22roamingIndication%22%3A%22NON_ROAMING%22%7D |
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?dnn=PEGAPN-LD3&preferred-locality=area1&requester-nf-type=AMF&service-names=nsmf-pdusession&snssais=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D&target-nf-type=SMF&target-plmn-list=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][SMF][PduSess] Recieve Create SM Context Request
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][SMF][PduSess] In HandlePDUSessionSMContextCreate
+free5gc-main       | 2021-12-16T02:57:28Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][PduSess] Send NF Discovery Serving UDM Successfully
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][CTX] Allocated UE IP address: 172.29.29.60
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][CTX] Selected UPF: UPF
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][PduSess] UE[imsi-001020000000004] PDUSessionID[1] IP[172.29.29.60]
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][UDM][SDM] Handle GetSmData
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][UDM][SDM] getSmDataProcedure: SUPI[imsi-001020000000004] PLMNID[00102] DNN[PEGAPN-LD3] SNssai[{"sst":1,"sd":"030609"}]
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][UDR][DRepo] Handle QuerySmData
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/sm-data?single-nssai=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D |
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/sm-data?dnn=PEGAPN-LD3&plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D&single-nssai=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D |
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] In HandlePDUSessionEstablishmentRequest
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][NAS][Convert] ProtocolOrContainerList:  [0xc000157120 0xc000157140 0xc000157160 0xc0001571a0 0xc0001571c0 0xc0001571e0 0xc000157200 0xc000157240]
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] Protocol Configuration Options
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] &{[0xc000157120 0xc000157140 0xc000157160 0xc0001571a0 0xc0001571c0 0xc0001571e0 0xc000157200 0xc000157240]}
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] Didn't Implement container type InternetProtocolControlProtocolUL
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] Didn't Implement container type IPAddressAllocationViaNASSignallingUL
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] Didn't Implement container type MSSupportOfNetworkRequestedBearerControlIndicatorUL
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] Didn't Implement container type MSSupportOfLocalAddressInTFTIndicatorUL
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] Didn't Implement container type QoSRulesWithTheLengthOfTwoOctetsSupportIndicatorUL
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GSM] Didn't Implement container type QoSFlowDescriptionsWithTheLengthOfTwoOctetsSupportIndicatorUL
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][PduSess] PCF Selection for SMContext SUPI[imsi-001020000000004] PDUSessionID[1]
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][PCF][SMpolicy] Handle CreateSmPolicy
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-smpolicycontrol/v1/sm-policies |
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][PduSess] SUPI[imsi-001020000000004] has no pre-config route
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-instance-id=a1c56a4b-5c47-47fa-8d4c-19854b77e3d1&target-nf-type=AMF |
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][Consumer] SendNFDiscoveryServingAMF ok
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][GIN] | 201 |       127.0.0.1 | POST    | /nsmf-pdusession/v1/sm-contexts |
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:99][SUPI:imsi-001020000000004] create smContext[pduSessionID: 1] Success
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][SMF][PFCP] In HandlePfcpSessionEstablishmentResponse
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][LIB][PFCP] Remove Request Transaction [136]
+free5gc-main       | &{2000 Mbps 2000 Mbps}
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][AMF][Producer] Handle N1N2 Message Transfer Request
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Send PDU Session Resource Setup Request
+free5gc-main       | 2021-12-16T02:57:29Z [INFO][AMF][GIN] | 200 |       127.0.0.1 | POST    | /namf-comm/v1/ue-contexts/imsi-001020000000004/n1-n2-messages |
+free5gc-main       | 2021-12-16T02:57:32Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle PDU Session Resource Setup Response
+free5gc-main       | 2021-12-16T02:57:32Z [INFO][SMF][PduSess] Recieve Update SM Context Request
+free5gc-main       | 2021-12-16T02:57:32Z [INFO][SMF][PduSess] In HandlePDUSessionSMContextUpdate
+free5gc-main       | 2021-12-16T02:57:32Z [ERRO][SMF][PduSess] Handle PDUSessionResourceSetupResponseTransfer failed: Align Bit is not zero
+free5gc-main       | 2021-12-16T02:57:32Z [WARN][SMF][PduSess] SM Context State [Active] shouldn't be here
+free5gc-main       | 2021-12-16T02:57:32Z [INFO][SMF][GIN] | 200 |       127.0.0.1 | POST    | /nsmf-pdusession/v1/sm-contexts/urn:uuid:3c2a99a4-d8ac-4ce0-b2da-98ecb8e90ca7/modify |
+free5gc-main       | 2021-12-16T02:57:33Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T02:57:33Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:57:33Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:100] NAS MAC verification failed(received: 0xa52f0cd4, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:57:33Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:100] Handle Registration Request
+free5gc-main       | 2021-12-16T02:57:33Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:100] Send Registration Reject
+free5gc-main       | 2021-12-16T02:57:33Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:100] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:57:33Z [ERRO][AMF][GMM] Mobility Registration Updating was sent when the UE state was Deregistered
+free5gc-main       | 2021-12-16T02:57:36Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:57:36Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:99] Rel Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T02:57:36Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[imsi-001020000000004] Context : N2 Connection Release
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T02:57:42Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:57:42Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:101] NAS MAC verification failed(received: 0xc6d1bc9c, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101] Handle Registration Request
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101] Authentication procedure
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101] Send Identity Request
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Uplink NAS Transport (RAN UE NGAP ID: 14)
+free5gc-main       | 2021-12-16T02:57:42Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:57:42Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:101] NAS MAC verification failed(received: 0xc1605b8a, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101] Handle Identity Response
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101] Authentication procedure
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=AUSF |
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AUSF][UeAuthPost] HandleUeAuthPostRequest
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][AUSF][UeAuthPost] Serving network authorized
+free5gc-main       | 2021-12-16T02:57:42Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AUSF&service-names=nudm-ueau&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDM][UEAU] Handle GenerateAuthDataRequest
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][LIB][3GPP] suciPart: [suci 0 001 02 0 0 0 0000000004]
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][LIB][3GPP] scheme 0
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][LIB][3GPP] SUPI type is IMSI
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDR][DRepo] Handle QueryAuthSubsData
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | 2021-12-16T02:57:43Z [ERRO][UDM][UEAU] opStr length is  0
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDR][DRepo] Handle ModifyAuthentication
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PATCH   | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | AUTN = f9eeec5c3a9d8000c7ce6694a274ee30
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | POST    | /nudm-ueau/v1/suci-0-001-02-0-0-0-0000000004/security-information/generate-auth-data |
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AUSF][UeAuthPost] Add SuciSupiPair (suci-0-001-02-0-0-0-0000000004, imsi-001020000000004) to map.
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AUSF][UeAuthPost] Use 5G AKA auth method
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AUSF][5gAkaAuth] XresStar = 6264363461353235663661663333383136343131646130336237386361346131
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AUSF][GIN] | 201 |       127.0.0.1 | POST    | /nausf-auth/v1/ue-authentications |
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101] Send Authentication Request
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Uplink NAS Transport (RAN UE NGAP ID: 14)
+free5gc-main       | 2021-12-16T02:57:43Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:57:43Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:101] NAS MAC verification failed(received: 0x91647adf, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101] Handle Authentication Response
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AUSF][5gAkaAuth] Auth5gAkaComfirmRequest
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AUSF][5gAkaAuth] res*: 6264363461353235663661663333383136343131646130336237386361346131
+free5gc-main       | Xres*: 6264363461353235663661663333383136343131646130336237386361346131
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AUSF][5gAkaAuth] 5G AKA confirmation succeeded
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDM][UEAU] Handle ConfirmAuthDataRequest
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDR][DRepo] Handle CreateAuthenticationStatus
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-status |
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-ueau/v1/imsi-001020000000004/auth-events |
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AUSF][GIN] | 200 |       127.0.0.1 | PUT     | /nausf-auth/v1/ue-authentications/suci-0-001-02-0-0-0-0000000004/5g-aka-confirmation |
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101][SUPI:imsi-001020000000004] Send Security Mode Command
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Uplink NAS Transport (RAN UE NGAP ID: 14)
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101][SUPI:imsi-001020000000004] Handle Security Mode Complete
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101][SUPI:imsi-001020000000004] Handle InitialRegistration
+free5gc-main       | 2021-12-16T02:57:43Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][SDM] Handle GetNssai
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features= |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/nssai?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101][SUPI:imsi-001020000000004] RequestedNssai - ServingSnssai: &{Sst:1 Sd:030609}, HomeSnssai: <nil>
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][UECM] Handle RegistrationAmf3gppAccess
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][UECM] UEID: imsi-001020000000004
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][DRepo] Handle CreateAmfContext3gpp
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/amf-3gpp-access |
+free5gc-main       | 2021-12-16T02:57:44Z [ERRO][UDM][HTTP] unsupported scheme[]
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][GIN] | 204 |       127.0.0.1 | PUT     | /nudm-uecm/v1/imsi-001020000000004/registrations/amf-3gpp-access |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][SDM] Handle GetAmData
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/am-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][SDM] Handle GetSmfSelectData
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][DRepo] Handle QuerySmfSelectData
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/smf-selection-subscription-data?supported-features= |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/smf-select-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][SDM] Handle GetUeContextInSmfData
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][DRepo] Handle QuerySmfRegList
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/smf-registrations?supported-features= |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/ue-context-in-smf-data |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][SDM] Handle Subscribe
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][DRepo] Handle CreateSdmSubscriptions
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][GIN] | 201 |       127.0.0.1 | POST    | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/sdm-subscriptions |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-sdm/v1/imsi-001020000000004/sdm-subscriptions |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][PCF][Ampolicy] Handle AM Policy Create Request
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][DRepo] Handle PolicyDataUesUeIdAmDataGet
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/policy-data/ues/imsi-001020000000004/am-data |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-am-policy-control/v1/policies |
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101][SUPI:imsi-001020000000004] Send Registration Accept
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Send Initial Context Setup Request
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][AMF][NGAP][192.168.120.72:38412] UE Context Release Request
+free5gc-main       | 2021-12-16T02:57:44Z [WARN][AMF][NGAP][192.168.120.72:38412] Cause RadioNetwork[3]
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:100] Ue Context in Non GMM-Registered
+free5gc-main       | 2021-12-16T02:57:44Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:100] Send UE Context Release Command
+free5gc-main       | 2021-12-16T02:57:45Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Radio Capability Info Indication
+free5gc-main       | 2021-12-16T02:57:46Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial Context Setup Response
+free5gc-main       | 2021-12-16T02:57:46Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:57:46Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[] Context : Release Ue Context
+free5gc-main       | 2021-12-16T02:57:46Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:57:46Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Uplink NAS Transport (RAN UE NGAP ID: 14)
+free5gc-main       | 2021-12-16T02:57:46Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:101][SUPI:imsi-001020000000004] Handle Registration Complete
+free5gc-main       | 2021-12-16T02:57:46Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Send UE Context Release Command
+free5gc-main       | 2021-12-16T02:57:47Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:57:47Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:101] Rel Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T02:57:47Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[imsi-001020000000004] Context : N2 Connection Release
+free5gc-main       | 2021-12-16T02:59:02Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T02:59:02Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:59:02Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:102] NAS MAC verification failed(received: 0x1ffa68e8, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:59:02Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:102] Handle Service Request
+free5gc-main       | 2021-12-16T02:59:02Z [WARN][AMF][GMM][AMF_UE_NGAP_ID:102] No Security Context : SUPI[]
+free5gc-main       | 2021-12-16T02:59:02Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:102] Send Service Reject
+free5gc-main       | 2021-12-16T02:59:02Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:102] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:59:02Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:102] Send UE Context Release Command
+free5gc-main       | 2021-12-16T02:59:03Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:59:03Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[] Context : N2 Connection Release
+free5gc-main       | 2021-12-16T02:59:15Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T02:59:15Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103] Handle Registration Request
+free5gc-main       | 2021-12-16T02:59:15Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103] Authentication procedure
+free5gc-main       | 2021-12-16T02:59:15Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:15Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=AUSF |
+free5gc-main       | 2021-12-16T02:59:15Z [INFO][AUSF][UeAuthPost] HandleUeAuthPostRequest
+free5gc-main       | 2021-12-16T02:59:15Z [INFO][AUSF][UeAuthPost] Serving network authorized
+free5gc-main       | 2021-12-16T02:59:15Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AUSF&service-names=nudm-ueau&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDM][UEAU] Handle GenerateAuthDataRequest
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][LIB][3GPP] suciPart: [suci 0 001 02 0 0 0 0000000004]
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][LIB][3GPP] scheme 0
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][LIB][3GPP] SUPI type is IMSI
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDR][DRepo] Handle QueryAuthSubsData
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | 2021-12-16T02:59:16Z [ERRO][UDM][UEAU] opStr length is  0
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDR][DRepo] Handle ModifyAuthentication
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PATCH   | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | POST    | /nudm-ueau/v1/suci-0-001-02-0-0-0-0000000004/security-information/generate-auth-data |
+free5gc-main       | AUTN = fec651d18b5a80007fd17e6bde2c538a
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AUSF][UeAuthPost] Add SuciSupiPair (suci-0-001-02-0-0-0-0000000004, imsi-001020000000004) to map.
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AUSF][UeAuthPost] Use 5G AKA auth method
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AUSF][5gAkaAuth] XresStar = 3837633934303935653065633661663361656632646365383164396633366136
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AUSF][GIN] | 201 |       127.0.0.1 | POST    | /nausf-auth/v1/ue-authentications |
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103] Send Authentication Request
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Uplink NAS Transport (RAN UE NGAP ID: 17)
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103] Handle Authentication Response
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AUSF][5gAkaAuth] Auth5gAkaComfirmRequest
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AUSF][5gAkaAuth] res*: 3837633934303935653065633661663361656632646365383164396633366136
+free5gc-main       | Xres*: 3837633934303935653065633661663361656632646365383164396633366136
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AUSF][5gAkaAuth] 5G AKA confirmation succeeded
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDM][UEAU] Handle ConfirmAuthDataRequest
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDR][DRepo] Handle CreateAuthenticationStatus
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-status |
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-ueau/v1/imsi-001020000000004/auth-events |
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AUSF][GIN] | 200 |       127.0.0.1 | PUT     | /nausf-auth/v1/ue-authentications/suci-0-001-02-0-0-0-0000000004/5g-aka-confirmation |
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] Send Security Mode Command
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Uplink NAS Transport (RAN UE NGAP ID: 17)
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] Handle Security Mode Complete
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] Handle InitialRegistration
+free5gc-main       | 2021-12-16T02:59:16Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][SDM] Handle GetNssai
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features= |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/nssai?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] RequestedNssai - ServingSnssai: &{Sst:1 Sd:030609}, HomeSnssai: <nil>
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][UECM] Handle RegistrationAmf3gppAccess
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][UECM] UEID: imsi-001020000000004
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][DRepo] Handle CreateAmfContext3gpp
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/amf-3gpp-access |
+free5gc-main       | 2021-12-16T02:59:17Z [ERRO][UDM][HTTP] unsupported scheme[]
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][GIN] | 204 |       127.0.0.1 | PUT     | /nudm-uecm/v1/imsi-001020000000004/registrations/amf-3gpp-access |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][SDM] Handle GetAmData
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/am-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][SDM] Handle GetSmfSelectData
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][DRepo] Handle QuerySmfSelectData
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/smf-selection-subscription-data?supported-features= |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/smf-select-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][SDM] Handle GetUeContextInSmfData
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][DRepo] Handle QuerySmfRegList
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/smf-registrations?supported-features= |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/ue-context-in-smf-data |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][SDM] Handle Subscribe
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][DRepo] Handle CreateSdmSubscriptions
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDR][GIN] | 201 |       127.0.0.1 | POST    | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/sdm-subscriptions |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-sdm/v1/imsi-001020000000004/sdm-subscriptions |
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:17Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][PCF][Ampolicy] Handle AM Policy Create Request
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][UDR][DRepo] Handle PolicyDataUesUeIdAmDataGet
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/policy-data/ues/imsi-001020000000004/am-data |
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-am-policy-control/v1/policies |
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] Send Registration Accept
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Send Initial Context Setup Request
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Radio Capability Info Indication
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial Context Setup Response
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Uplink NAS Transport (RAN UE NGAP ID: 17)
+free5gc-main       | 2021-12-16T02:59:18Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] Handle Registration Complete
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Uplink NAS Transport (RAN UE NGAP ID: 17)
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] Handle UL NAS Transport
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] Transport 5GSM Message to SMF
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] Select SMF [snssai: {Sst:1 Sd:030609}, dnn: PEGAPN-LD3]
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=NSSF |
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][NSSF][NsSelect] Handle NSSelectionGet
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][NSSF][GIN] | 200 |       127.0.0.1 | GET     | /nnssf-nsselection/v1/network-slice-information?nf-id=a1c56a4b-5c47-47fa-8d4c-19854b77e3d1&nf-type=AMF&slice-info-request-for-pdu-session=%7B%22sNssai%22%3A%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D%2C%22roamingIndication%22%3A%22NON_ROAMING%22%7D |
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?dnn=PEGAPN-LD3&preferred-locality=area1&requester-nf-type=AMF&service-names=nsmf-pdusession&snssais=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D&target-nf-type=SMF&target-plmn-list=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][SMF][PduSess] Recieve Create SM Context Request
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][SMF][PduSess] In HandlePDUSessionSMContextCreate
+free5gc-main       | 2021-12-16T02:59:19Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][PduSess] Send NF Discovery Serving UDM Successfully
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][CTX] Allocated UE IP address: 172.29.29.61
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][CTX] Selected UPF: UPF
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][PduSess] UE[imsi-001020000000004] PDUSessionID[1] IP[172.29.29.61]
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][UDM][SDM] Handle GetSmData
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][UDM][SDM] getSmDataProcedure: SUPI[imsi-001020000000004] PLMNID[00102] DNN[PEGAPN-LD3] SNssai[{"sst":1,"sd":"030609"}]
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][UDR][DRepo] Handle QuerySmData
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/sm-data?single-nssai=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D |
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/sm-data?dnn=PEGAPN-LD3&plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D&single-nssai=%7B%22sst%22%3A1%2C%22sd%22%3A%22030609%22%7D |
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] In HandlePDUSessionEstablishmentRequest
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][NAS][Convert] ProtocolOrContainerList:  [0xc000157260 0xc0001572c0 0xc0001572e0 0xc000157320 0xc000157340 0xc000157360 0xc000157380 0xc0001573a0]
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] Protocol Configuration Options
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] &{[0xc000157260 0xc0001572c0 0xc0001572e0 0xc000157320 0xc000157340 0xc000157360 0xc000157380 0xc0001573a0]}
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] Didn't Implement container type InternetProtocolControlProtocolUL
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] Didn't Implement container type IPAddressAllocationViaNASSignallingUL
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] Didn't Implement container type MSSupportOfNetworkRequestedBearerControlIndicatorUL
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] Didn't Implement container type MSSupportOfLocalAddressInTFTIndicatorUL
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] Didn't Implement container type QoSRulesWithTheLengthOfTwoOctetsSupportIndicatorUL
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GSM] Didn't Implement container type QoSFlowDescriptionsWithTheLengthOfTwoOctetsSupportIndicatorUL
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][PduSess] PCF Selection for SMContext SUPI[imsi-001020000000004] PDUSessionID[1]
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][PCF][SMpolicy] Handle CreateSmPolicy
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-smpolicycontrol/v1/sm-policies |
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][PduSess] SUPI[imsi-001020000000004] has no pre-config route
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=SMF&target-nf-instance-id=a1c56a4b-5c47-47fa-8d4c-19854b77e3d1&target-nf-type=AMF |
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][Consumer] SendNFDiscoveryServingAMF ok
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][GIN] | 201 |       127.0.0.1 | POST    | /nsmf-pdusession/v1/sm-contexts |
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:103][SUPI:imsi-001020000000004] create smContext[pduSessionID: 1] Success
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][LIB][PFCP] Remove Request Transaction [137]
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][SMF][PFCP] In HandlePfcpSessionEstablishmentResponse
+free5gc-main       | &{2000 Mbps 2000 Mbps}
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][AMF][Producer] Handle N1N2 Message Transfer Request
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Send PDU Session Resource Setup Request
+free5gc-main       | 2021-12-16T02:59:20Z [INFO][AMF][GIN] | 200 |       127.0.0.1 | POST    | /namf-comm/v1/ue-contexts/imsi-001020000000004/n1-n2-messages |
+free5gc-main       | 2021-12-16T02:59:21Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T02:59:21Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:59:21Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:104] NAS MAC verification failed(received: 0x055f6356, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:59:21Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:104] Handle Registration Request
+free5gc-main       | 2021-12-16T02:59:21Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:104] Send Registration Reject
+free5gc-main       | 2021-12-16T02:59:21Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:104] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:59:21Z [ERRO][AMF][GMM] Mobility Registration Updating was sent when the UE state was Deregistered
+free5gc-main       | 2021-12-16T02:59:23Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle PDU Session Resource Setup Response
+free5gc-main       | 2021-12-16T02:59:23Z [INFO][SMF][PduSess] Recieve Update SM Context Request
+free5gc-main       | 2021-12-16T02:59:23Z [INFO][SMF][PduSess] In HandlePDUSessionSMContextUpdate
+free5gc-main       | 2021-12-16T02:59:23Z [ERRO][SMF][PduSess] Handle PDUSessionResourceSetupResponseTransfer failed: Align Bit is not zero
+free5gc-main       | 2021-12-16T02:59:23Z [WARN][SMF][PduSess] SM Context State [Active] shouldn't be here
+free5gc-main       | 2021-12-16T02:59:23Z [INFO][SMF][GIN] | 200 |       127.0.0.1 | POST    | /nsmf-pdusession/v1/sm-contexts/urn:uuid:c8bff55c-3d44-494e-bc09-8bd8209d7885/modify |
+free5gc-main       | 2021-12-16T02:59:27Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:59:27Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:103] Rel Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T02:59:27Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[imsi-001020000000004] Context : N2 Connection Release
+free5gc-main       | 2021-12-16T02:59:30Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T02:59:30Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:59:30Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:105] NAS MAC verification failed(received: 0xf56a70a1, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:59:30Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105] Handle Registration Request
+free5gc-main       | 2021-12-16T02:59:30Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105] Authentication procedure
+free5gc-main       | 2021-12-16T02:59:30Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105] Send Identity Request
+free5gc-main       | 2021-12-16T02:59:30Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Uplink NAS Transport (RAN UE NGAP ID: 19)
+free5gc-main       | 2021-12-16T02:59:31Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:59:31Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:105] NAS MAC verification failed(received: 0xad0af0d4, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105] Handle Identity Response
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105] Authentication procedure
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=AUSF |
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][UeAuthPost] HandleUeAuthPostRequest
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][UeAuthPost] Serving network authorized
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AUSF&service-names=nudm-ueau&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDM][UEAU] Handle GenerateAuthDataRequest
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][LIB][3GPP] suciPart: [suci 0 001 02 0 0 0 0000000004]
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][LIB][3GPP] scheme 0
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][LIB][3GPP] SUPI type is IMSI
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDR][DRepo] Handle QueryAuthSubsData
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | 2021-12-16T02:59:31Z [ERRO][UDM][UEAU] opStr length is  0
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDR][DRepo] Handle ModifyAuthentication
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PATCH   | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | AUTN = fe0eb9d013d18000214ceaeb8e54c0a4
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | POST    | /nudm-ueau/v1/suci-0-001-02-0-0-0-0000000004/security-information/generate-auth-data |
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][UeAuthPost] Add SuciSupiPair (suci-0-001-02-0-0-0-0000000004, imsi-001020000000004) to map.
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][UeAuthPost] Use 5G AKA auth method
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][5gAkaAuth] XresStar = 3831353766303932633662636462343738653064623138323636306233303230
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][GIN] | 201 |       127.0.0.1 | POST    | /nausf-auth/v1/ue-authentications |
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105] Send Authentication Request
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412] UE Context Release Request
+free5gc-main       | 2021-12-16T02:59:31Z [WARN][AMF][NGAP][192.168.120.72:38412] Cause RadioNetwork[3]
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:104] Ue Context in Non GMM-Registered
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:104] Send UE Context Release Command
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Uplink NAS Transport (RAN UE NGAP ID: 19)
+free5gc-main       | 2021-12-16T02:59:31Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T02:59:31Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:105] NAS MAC verification failed(received: 0xa533cfe1, expected: 0x00000000)
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105] Handle Authentication Response
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][5gAkaAuth] Auth5gAkaComfirmRequest
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][5gAkaAuth] res*: 3831353766303932633662636462343738653064623138323636306233303230
+free5gc-main       | Xres*: 3831353766303932633662636462343738653064623138323636306233303230
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][5gAkaAuth] 5G AKA confirmation succeeded
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDM][UEAU] Handle ConfirmAuthDataRequest
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDR][DRepo] Handle CreateAuthenticationStatus
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-status |
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-ueau/v1/imsi-001020000000004/auth-events |
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AUSF][GIN] | 200 |       127.0.0.1 | PUT     | /nausf-auth/v1/ue-authentications/suci-0-001-02-0-0-0-0000000004/5g-aka-confirmation |
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105][SUPI:imsi-001020000000004] Send Security Mode Command
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Uplink NAS Transport (RAN UE NGAP ID: 19)
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105][SUPI:imsi-001020000000004] Handle Security Mode Complete
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105][SUPI:imsi-001020000000004] Handle InitialRegistration
+free5gc-main       | 2021-12-16T02:59:31Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][SDM] Handle GetNssai
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features= |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/nssai?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105][SUPI:imsi-001020000000004] RequestedNssai - ServingSnssai: &{Sst:1 Sd:030609}, HomeSnssai: <nil>
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][UECM] Handle RegistrationAmf3gppAccess
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][UECM] UEID: imsi-001020000000004
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][DRepo] Handle CreateAmfContext3gpp
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/amf-3gpp-access |
+free5gc-main       | 2021-12-16T02:59:32Z [ERRO][UDM][HTTP] unsupported scheme[]
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][GIN] | 204 |       127.0.0.1 | PUT     | /nudm-uecm/v1/imsi-001020000000004/registrations/amf-3gpp-access |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][SDM] Handle GetAmData
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/am-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][SDM] Handle GetSmfSelectData
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][DRepo] Handle QuerySmfSelectData
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/smf-selection-subscription-data?supported-features= |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/smf-select-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][SDM] Handle GetUeContextInSmfData
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][DRepo] Handle QuerySmfRegList
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/smf-registrations?supported-features= |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/ue-context-in-smf-data |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][SDM] Handle Subscribe
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][DRepo] Handle CreateSdmSubscriptions
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDR][GIN] | 201 |       127.0.0.1 | POST    | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/sdm-subscriptions |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-sdm/v1/imsi-001020000000004/sdm-subscriptions |
+free5gc-main       | 2021-12-16T02:59:32Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][PCF][Ampolicy] Handle AM Policy Create Request
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][UDR][DRepo] Handle PolicyDataUesUeIdAmDataGet
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/policy-data/ues/imsi-001020000000004/am-data |
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-am-policy-control/v1/policies |
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105][SUPI:imsi-001020000000004] Send Registration Accept
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Send Initial Context Setup Request
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[] Context : Release Ue Context
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Radio Capability Info Indication
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial Context Setup Response
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Uplink NAS Transport (RAN UE NGAP ID: 19)
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:105][SUPI:imsi-001020000000004] Handle Registration Complete
+free5gc-main       | 2021-12-16T02:59:33Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Send UE Context Release Command
+free5gc-main       | 2021-12-16T02:59:34Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T02:59:34Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:105] Rel Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T02:59:34Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[imsi-001020000000004] Context : N2 Connection Release
+free5gc-main       | 2021-12-16T03:02:09Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T03:02:09Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:02:09Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:106] NAS MAC verification failed(received: 0x987eaca5, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:02:09Z [ERRO][AMF][GMM][AMF_UE_NGAP_ID:106] state mismatch: receieve gmm message[message type 0x45] at Deregistered state
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T03:02:18Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:02:18Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:107] NAS MAC verification failed(received: 0x31d23433, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107] Handle Registration Request
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107] Authentication procedure
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107] Send Identity Request
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Uplink NAS Transport (RAN UE NGAP ID: 22)
+free5gc-main       | 2021-12-16T03:02:18Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:02:18Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:107] NAS MAC verification failed(received: 0x687a2dc4, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107] Handle Identity Response
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107] Authentication procedure
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=AUSF |
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AUSF][UeAuthPost] HandleUeAuthPostRequest
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][AUSF][UeAuthPost] Serving network authorized
+free5gc-main       | 2021-12-16T03:02:18Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AUSF&service-names=nudm-ueau&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDM][UEAU] Handle GenerateAuthDataRequest
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][LIB][3GPP] suciPart: [suci 0 001 02 0 0 0 0000000004]
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][LIB][3GPP] scheme 0
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][LIB][3GPP] SUPI type is IMSI
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDR][DRepo] Handle QueryAuthSubsData
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | 2021-12-16T03:02:19Z [ERRO][UDM][UEAU] opStr length is  0
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDR][DRepo] Handle ModifyAuthentication
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PATCH   | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | AUTN = f74faa3840b980005dc882c9f5845460
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | POST    | /nudm-ueau/v1/suci-0-001-02-0-0-0-0000000004/security-information/generate-auth-data |
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AUSF][UeAuthPost] Add SuciSupiPair (suci-0-001-02-0-0-0-0000000004, imsi-001020000000004) to map.
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AUSF][UeAuthPost] Use 5G AKA auth method
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AUSF][5gAkaAuth] XresStar = 3165373135623366613738326138303533376139643462333539343135393936
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AUSF][GIN] | 201 |       127.0.0.1 | POST    | /nausf-auth/v1/ue-authentications |
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107] Send Authentication Request
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Uplink NAS Transport (RAN UE NGAP ID: 22)
+free5gc-main       | 2021-12-16T03:02:19Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:02:19Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:107] NAS MAC verification failed(received: 0xbd4f7e4b, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107] Handle Authentication Response
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AUSF][5gAkaAuth] Auth5gAkaComfirmRequest
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AUSF][5gAkaAuth] res*: 3165373135623366613738326138303533376139643462333539343135393936
+free5gc-main       | Xres*: 3165373135623366613738326138303533376139643462333539343135393936
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AUSF][5gAkaAuth] 5G AKA confirmation succeeded
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDM][UEAU] Handle ConfirmAuthDataRequest
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDR][DRepo] Handle CreateAuthenticationStatus
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-status |
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-ueau/v1/imsi-001020000000004/auth-events |
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AUSF][GIN] | 200 |       127.0.0.1 | PUT     | /nausf-auth/v1/ue-authentications/suci-0-001-02-0-0-0-0000000004/5g-aka-confirmation |
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107][SUPI:imsi-001020000000004] Send Security Mode Command
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Uplink NAS Transport (RAN UE NGAP ID: 22)
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107][SUPI:imsi-001020000000004] Handle Security Mode Complete
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107][SUPI:imsi-001020000000004] Handle InitialRegistration
+free5gc-main       | 2021-12-16T03:02:19Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][SDM] Handle GetNssai
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features= |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/nssai?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107][SUPI:imsi-001020000000004] RequestedNssai - ServingSnssai: &{Sst:1 Sd:030609}, HomeSnssai: <nil>
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][UECM] Handle RegistrationAmf3gppAccess
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][UECM] UEID: imsi-001020000000004
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][DRepo] Handle CreateAmfContext3gpp
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/amf-3gpp-access |
+free5gc-main       | 2021-12-16T03:02:20Z [ERRO][UDM][HTTP] unsupported scheme[]
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][GIN] | 204 |       127.0.0.1 | PUT     | /nudm-uecm/v1/imsi-001020000000004/registrations/amf-3gpp-access |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][SDM] Handle GetAmData
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/am-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][SDM] Handle GetSmfSelectData
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][DRepo] Handle QuerySmfSelectData
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/smf-selection-subscription-data?supported-features= |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/smf-select-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][SDM] Handle GetUeContextInSmfData
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][DRepo] Handle QuerySmfRegList
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/smf-registrations?supported-features= |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/ue-context-in-smf-data |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][SDM] Handle Subscribe
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][DRepo] Handle CreateSdmSubscriptions
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][GIN] | 201 |       127.0.0.1 | POST    | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/sdm-subscriptions |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-sdm/v1/imsi-001020000000004/sdm-subscriptions |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][PCF][Ampolicy] Handle AM Policy Create Request
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][DRepo] Handle PolicyDataUesUeIdAmDataGet
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/policy-data/ues/imsi-001020000000004/am-data |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-am-policy-control/v1/policies |
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107][SUPI:imsi-001020000000004] Send Registration Accept
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Send Initial Context Setup Request
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][AMF][NGAP][192.168.120.72:38412] UE Context Release Request
+free5gc-main       | 2021-12-16T03:02:20Z [ERRO][AMF][NGAP][192.168.120.72:38412] No RanUe Context[AmfUeNgapID: 0]
+free5gc-main       | 2021-12-16T03:02:20Z [INFO][AMF][NGAP][192.168.120.72:38412] Send Error Indication
+free5gc-main       | 2021-12-16T03:02:21Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Radio Capability Info Indication
+free5gc-main       | 2021-12-16T03:02:21Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial Context Setup Response
+free5gc-main       | 2021-12-16T03:02:21Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T03:02:21Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Uplink NAS Transport (RAN UE NGAP ID: 22)
+free5gc-main       | 2021-12-16T03:02:21Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:107][SUPI:imsi-001020000000004] Handle Registration Complete
+free5gc-main       | 2021-12-16T03:02:28Z [INFO][AMF][NGAP][192.168.120.72:38412] UE Context Release Request
+free5gc-main       | 2021-12-16T03:02:28Z [WARN][AMF][NGAP][192.168.120.72:38412] Cause RadioNetwork[3]
+free5gc-main       | 2021-12-16T03:02:28Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T03:02:28Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Send UE Context Release Command
+free5gc-main       | 2021-12-16T03:02:29Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T03:02:29Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:107] Rel Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T03:02:29Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[imsi-001020000000004] Context : N2 Connection Release
+free5gc-main       | 2021-12-16T03:03:00Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T03:03:00Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:03:00Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:108] NAS MAC verification failed(received: 0xb16bb2c7, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:03:00Z [ERRO][AMF][GMM][AMF_UE_NGAP_ID:108] state mismatch: receieve gmm message[message type 0x45] at Deregistered state
+free5gc-main       | 2021-12-16T03:03:10Z [INFO][AMF][NGAP][192.168.120.72:38412] UE Context Release Request
+free5gc-main       | 2021-12-16T03:03:10Z [ERRO][AMF][NGAP][192.168.120.72:38412] No RanUe Context[AmfUeNgapID: 0]
+free5gc-main       | 2021-12-16T03:03:10Z [INFO][AMF][NGAP][192.168.120.72:38412] Send Error Indication
+free5gc-main       | 2021-12-16T03:04:01Z [INFO][AMF][NGAP] Handle SCTP Notification[addr: 192.168.120.72:38412]
+free5gc-main       | 2021-12-16T03:04:01Z [INFO][AMF][NGAP][192.168.120.72:38412] SCTP_SHUTDOWN_EVENT notification, close the connection
+free5gc-main       | 2021-12-16T03:04:01Z [INFO][AMF][NGAP][192.168.120.72:38412] Remove RAN Context[ID: <PlmnID: {Mcc:001 Mnc:02}, GNbID: 00002c>]
+free5gc-main       | 2021-12-16T03:04:01Z [INFO][AMF][NGAP] Handle SCTP Notification[addr: <nil>]
+free5gc-main       | 2021-12-16T03:04:01Z [WARN][AMF][NGAP] RAN context has been removed[addr: <nil>]
+free5gc-main       | 2021-12-16T03:04:55Z [INFO][AMF][NGAP] [AMF] SCTP Accept from: 192.168.120.72:38412
+free5gc-main       | 2021-12-16T03:04:55Z [INFO][AMF][NGAP] Create a new NG connection for: 192.168.120.72:38412
+free5gc-main       | 2021-12-16T03:04:55Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle NG Setup request
+free5gc-main       | 2021-12-16T03:04:55Z [INFO][AMF][NGAP][192.168.120.72:38412] Send NG-Setup response
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T03:05:27Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:05:27Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:109] NAS MAC verification failed(received: 0x2b337086, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109] Handle Registration Request
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109] Authentication procedure
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109] Send Identity Request
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Uplink NAS Transport (RAN UE NGAP ID: 2)
+free5gc-main       | 2021-12-16T03:05:27Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:05:27Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:109] NAS MAC verification failed(received: 0x79596222, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109] Handle Identity Response
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109] Authentication procedure
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=AUSF |
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AUSF][UeAuthPost] HandleUeAuthPostRequest
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AUSF][UeAuthPost] Serving network authorized
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AUSF&service-names=nudm-ueau&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][UDM][UEAU] Handle GenerateAuthDataRequest
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][LIB][3GPP] suciPart: [suci 0 001 02 0 0 0 0000000004]
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][LIB][3GPP] scheme 0
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][LIB][3GPP] SUPI type is IMSI
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][UDR][DRepo] Handle QueryAuthSubsData
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | 2021-12-16T03:05:27Z [ERRO][UDM][UEAU] opStr length is  0
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][UDR][DRepo] Handle ModifyAuthentication
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PATCH   | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-subscription |
+free5gc-main       | AUTN = 55279cec5b778000343fadb60e1f8b3c
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | POST    | /nudm-ueau/v1/suci-0-001-02-0-0-0-0000000004/security-information/generate-auth-data |
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AUSF][UeAuthPost] Add SuciSupiPair (suci-0-001-02-0-0-0-0000000004, imsi-001020000000004) to map.
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AUSF][UeAuthPost] Use 5G AKA auth method
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AUSF][5gAkaAuth] XresStar = 3839646563373839646235336665383564633661656433333538636231353362
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AUSF][GIN] | 201 |       127.0.0.1 | POST    | /nausf-auth/v1/ue-authentications |
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109] Send Authentication Request
+free5gc-main       | 2021-12-16T03:05:27Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Uplink NAS Transport (RAN UE NGAP ID: 2)
+free5gc-main       | 2021-12-16T03:05:28Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:05:28Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:109] NAS MAC verification failed(received: 0xde8ed365, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109] Handle Authentication Response
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AUSF][5gAkaAuth] Auth5gAkaComfirmRequest
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AUSF][5gAkaAuth] res*: 3839646563373839646235336665383564633661656433333538636231353362
+free5gc-main       | Xres*: 3839646563373839646235336665383564633661656433333538636231353362
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AUSF][5gAkaAuth] 5G AKA confirmation succeeded
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][UDM][UEAU] Handle ConfirmAuthDataRequest
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][UDR][DRepo] Handle CreateAuthenticationStatus
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/authentication-data/authentication-status |
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-ueau/v1/imsi-001020000000004/auth-events |
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AUSF][GIN] | 200 |       127.0.0.1 | PUT     | /nausf-auth/v1/ue-authentications/suci-0-001-02-0-0-0-0000000004/5g-aka-confirmation |
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109][SUPI:imsi-001020000000004] Send Security Mode Command
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Send Downlink Nas Transport
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Uplink NAS Transport (RAN UE NGAP ID: 2)
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109][SUPI:imsi-001020000000004] Handle Security Mode Complete
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109][SUPI:imsi-001020000000004] Handle InitialRegistration
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][UDM][SDM] Handle GetNssai
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features= |
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/nssai?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109][SUPI:imsi-001020000000004] RequestedNssai - ServingSnssai: &{Sst:1 Sd:030609}, HomeSnssai: <nil>
+free5gc-main       | 2021-12-16T03:05:28Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=UDM |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][UECM] Handle RegistrationAmf3gppAccess
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][UECM] UEID: imsi-001020000000004
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][DRepo] Handle CreateAmfContext3gpp
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][GIN] | 204 |       127.0.0.1 | PUT     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/amf-3gpp-access |
+free5gc-main       | 2021-12-16T03:05:29Z [ERRO][UDM][HTTP] unsupported scheme[]
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][GIN] | 204 |       127.0.0.1 | PUT     | /nudm-uecm/v1/imsi-001020000000004/registrations/amf-3gpp-access |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][SDM] Handle GetAmData
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][DRepo] Handle QueryAmData
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/am-data?supported-features=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/am-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][SDM] Handle GetSmfSelectData
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][DRepo] Handle QuerySmfSelectData
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/00102/provisioned-data/smf-selection-subscription-data?supported-features= |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/smf-select-data?plmn-id=%7B%22mcc%22%3A%22001%22%2C%22mnc%22%3A%2202%22%7D |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][SDM] Handle GetUeContextInSmfData
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][DRepo] Handle QuerySmfRegList
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/smf-registrations?supported-features= |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][GIN] | 200 |       127.0.0.1 | GET     | /nudm-sdm/v1/imsi-001020000000004/ue-context-in-smf-data |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][SDM] Handle Subscribe
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][DRepo] Handle CreateSdmSubscriptions
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][GIN] | 201 |       127.0.0.1 | POST    | /nudr-dr/v1/subscription-data/imsi-001020000000004/context-data/sdm-subscriptions |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDM][GIN] | 201 |       127.0.0.1 | POST    | /nudm-sdm/v1/imsi-001020000000004/sdm-subscriptions |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][NRF][DSCV] Handle NFDiscoveryRequest
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][NRF][GIN] | 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=AMF&supi=imsi-001020000000004&target-nf-type=PCF |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][PCF][Ampolicy] Handle AM Policy Create Request
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][DRepo] Handle PolicyDataUesUeIdAmDataGet
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][UDR][GIN] | 200 |       127.0.0.1 | GET     | /nudr-dr/v1/policy-data/ues/imsi-001020000000004/am-data |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][PCF][GIN] | 201 |       127.0.0.1 | POST    | /npcf-am-policy-control/v1/policies |
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109][SUPI:imsi-001020000000004] Send Registration Accept
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Send Initial Context Setup Request
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Radio Capability Info Indication
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial Context Setup Response
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Uplink Nas Transport
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Uplink NAS Transport (RAN UE NGAP ID: 2)
+free5gc-main       | 2021-12-16T03:05:29Z [INFO][AMF][GMM][AMF_UE_NGAP_ID:109][SUPI:imsi-001020000000004] Handle Registration Complete
+free5gc-main       | 2021-12-16T03:05:36Z [INFO][AMF][NGAP][192.168.120.72:38412] UE Context Release Request
+free5gc-main       | 2021-12-16T03:05:36Z [WARN][AMF][NGAP][192.168.120.72:38412] Cause RadioNetwork[3]
+free5gc-main       | 2021-12-16T03:05:36Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T03:05:36Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Send UE Context Release Command
+free5gc-main       | 2021-12-16T03:05:37Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle UE Context Release Complete
+free5gc-main       | 2021-12-16T03:05:37Z [INFO][AMF][NGAP][192.168.120.72:38412][AMF_UE_NGAP_ID:109] Rel Ue Context in GMM-Registered
+free5gc-main       | 2021-12-16T03:05:37Z [INFO][AMF][NGAP][192.168.120.72:38412] Release UE[imsi-001020000000004] Context : N2 Connection Release
+free5gc-main       | 2021-12-16T03:05:44Z [INFO][AMF][NGAP][192.168.120.72:38412] Handle Initial UE Message
+free5gc-main       | 2021-12-16T03:05:44Z [WARN][NAS][Security] Integrity NIA0 is emergency.
+free5gc-main       | 2021-12-16T03:05:44Z [WARN][AMF][NAS][AMF_UE_NGAP_ID:110] NAS MAC verification failed(received: 0xd71b0a51, expected: 0x00000000)
+free5gc-main       | 2021-12-16T03:05:44Z [ERRO][AMF][GMM][AMF_UE_NGAP_ID:110] state mismatch: receieve gmm message[message type 0x45] at Deregistered state
+
