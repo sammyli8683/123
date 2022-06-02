@@ -1,0 +1,33 @@
+這是一個測試UPF的小工具
+執行
+sudo ./testuldl.sh  
+
+
+測試架構是
+
+Connect x-6 (UPF n3 and n6)
+___________________
+|   __      __    |
+|  |II|    |II|   |
+|___II______II____|
+    II      II
+    II      II 兩卡互接(physical line)
+____II______II_____
+|   II      II    |
+|  |II|    |II|   |
+|_________________|
+
+Other card (Ran and Dn)
+
+
+
+功能:
+讀取發送跟接收的封包比較
+目前只讀取 GTP/UDP封包
+如遇到裡面不相干的封包,不會讀ex ARP
+比較兩封包的ip
+比較SMF simulator 跟 GTP封包
+
+error
+1.smf simulator 設定錯誤
+2.網卡 ip 設定問題
